@@ -50,7 +50,7 @@ public class Cadastro_Aluno {
 
                     active = false;
                 } else {
-                    System.out.println("Invalid day");
+                    System.out.println("Invalid Month");
 
                 }
             }
@@ -58,11 +58,11 @@ public class Cadastro_Aluno {
             while (active) {
                 System.out.printf("Data de Nascimento, ANO: ");
                 ano_nascimento[i] = tecladoNumber.nextInt();
-                if (ano_nascimento[i] < anoAtual && ano_nascimento[i] > 0) {
+                if (ano_nascimento[i] <= anoAtual && ano_nascimento[i] > 0) {
                     active = false;
 
                 } else {
-                    System.out.println("Invalid day");
+                    System.out.println("Invalid Year");
 
                 }
             }
