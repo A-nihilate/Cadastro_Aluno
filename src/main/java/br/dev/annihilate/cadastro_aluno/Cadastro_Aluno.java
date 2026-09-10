@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Cadastro_Aluno {
 
     public static void main(String[] args) {
+        
         Random randomizer = new Random();
         Scanner tecladoNumber = new Scanner(System.in);
         Scanner tecladoString = new Scanner(System.in);
@@ -22,14 +23,18 @@ public class Cadastro_Aluno {
         int anoAtual = 2026;
 
         for (int i = 0; i < id.length; i++) {
-
             id[i] = randomizer.nextInt(1, 999999999);
+            System.out.printf("Nome: ");
             nome[i] = tecladoString.nextLine();
+            System.out.printf("Telefone: ");
             telefone[i] = tecladoNumber.nextLong();
+            System.out.printf("Data de Nascimento, DIA: ");
             dia_nascimento[i] = tecladoNumber.nextInt();
+            System.out.printf("Data de Nascimento, MES: ");
             mes_nascimento[i] = tecladoNumber.nextInt();
+            System.out.printf("Data de Nascimento, ANO: ");
             ano_nascimento[i] = tecladoNumber.nextInt();
-            System.out.printf("output %d %02d %s %d %02d %02d %04d %02d \n", i, id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
+            System.out.printf("\noutput %d %02d %s %d %02d %02d %04d %02d \n", i, id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
         }
 
 //        output
