@@ -85,7 +85,7 @@ public class Cadastro_Aluno {
                     if (overide == true && activeRecords == 10) {
                         activeRecords = 0;
                     }
-                    for (int i = activeRecords; i < qtdAluno; activeRecords++) {
+                    for (int i = activeRecords; i < qtdAluno; i++) {
 
                         if (mode == 1) {
                             id[i] = randomizer.nextInt(1, 999999999);
@@ -96,6 +96,7 @@ public class Cadastro_Aluno {
                                 break;
                             }
                         }
+                        System.out.println("Aluno "+i);
                         System.out.printf("Nome: ");
                         nome[i] = tecladoString.nextLine();
 
@@ -135,7 +136,8 @@ public class Cadastro_Aluno {
 
                             }
                         }
-                        System.out.printf("\noutput %d %02d %s %d %02d %02d %04d %02d \n", i, id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
+//                        System.out.printf("\noutput %d %02d %s %d %02d %02d %04d %02d \n", i, id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
+                        ++activeRecords;
                     }
                 case 2:
 
