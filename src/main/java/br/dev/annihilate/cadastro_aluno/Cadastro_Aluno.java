@@ -25,7 +25,7 @@ public class Cadastro_Aluno {
 
         for (int i = 0; i < id.length; i++) {
 
-            id[i] = randomizer.nextInt(1, 999999999);
+            id[i] = randomizer.nextInt(1,999999999);
 
             System.out.printf("Nome: ");
             nome[i] = tecladoString.nextLine();
@@ -70,13 +70,13 @@ public class Cadastro_Aluno {
         }
 
 //        output
-//                            10           13               12            3       3   4      5
-        System.out.println("|------------|---------------|--------------|-----|-----|------|-------|");
-        System.out.println("| ID         | NOME          | Telefone     | dia | mes | ano  | idade |");
-        System.out.println("|------------|---------------|--------------|-----|-----|------|-------|");
+//                            10           20                     12             3    3   4      5
+        System.out.println("|------------|----------------------|--------------|-------------|-------|");
+        System.out.println("| ID         | NOME                 | Telefone     | dia/mes/ano | idade |");
+        System.out.println("|------------|----------------------|--------------|-------------|-------|");
         for (int i = 0; i < id.length; i++) {
-            System.out.printf("| %10d | %13s | %12d | %02d  | %02d  | %04d | %5d |\n", id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
-            System.out.println("|------------|---------------|--------------|-----|-----|------|-------|");
+            System.out.printf("| %10d | %20s | %12d |  %02d/%02d/%04d | %5d |\n", id[i], nome[i], telefone[i], dia_nascimento[i], mes_nascimento[i], ano_nascimento[i], anoAtual - ano_nascimento[i]);
+            System.out.println("|------------|----------------------|--------------|-------------|-------|");
         }
     }
 }
